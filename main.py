@@ -1,6 +1,7 @@
 import telebot
+import os
 
-TOKEN = "TOKEN"
+TOKEN = os.environ.get('TOKEN', '')
 bot = telebot.TeleBot(TOKEN)
 
 # Start buyrug`iga javob beruvchi funksiya
@@ -15,6 +16,8 @@ def echo_message_handler(message):
     chat_id = message.chat.id
     text = message.text
     bot.send_message(chat_id, text)
+    user_text = f'User send {text} text'
+    print(user_text)
 
 
 # Botni ishga tushiruvchi funksiyani chaqirilishi
