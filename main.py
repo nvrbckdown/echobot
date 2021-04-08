@@ -1,6 +1,6 @@
 import telebot
 
-TOKEN = "BotFatherdan olingan bot tokeni!"
+TOKEN = "TOKEN"
 bot = telebot.TeleBot(TOKEN)
 
 # Start buyrug`iga javob beruvchi funksiya
