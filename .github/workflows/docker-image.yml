@@ -15,7 +15,7 @@ jobs:
         steps:
         - uses: actions/checkout@v2
         - name: Print entity of repo
-          run: ls -la .
+          run: ls
         - name: Print entity of main.py
           run: cat main.py
         - name: Print DEPLOY_VER
