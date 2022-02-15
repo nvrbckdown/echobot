@@ -3,7 +3,7 @@ name: Extra-task
 on: 
     push:
         branches:
-            - master
+            - main
 
 env:
     DEPLOY_VER: $GITHUB_SHA
