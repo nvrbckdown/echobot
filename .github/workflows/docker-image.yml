@@ -1,18 +1,25 @@
-name: Docker Image CI
+name: Extra-task
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: 
+    push:
+        branches:
+            - master
+
+env:
+    DEPLOY_VER: $GITHUB_SHA
+
 
 jobs:
-
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag echobot:latest
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Print entity of repo
+          run: ls
+        - name: Print entity of log.txt
+          run: cat log.txt
+        - name: Print DEPLOY_VER
+          run: echo "Hello from $DEPLOY_VER commit"
+    
+    # second_job:
+    #     needs: first_job
+    #     runs-on: ubuntu-latest
