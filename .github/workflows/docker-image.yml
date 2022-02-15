@@ -7,6 +7,9 @@ on:
 
 env:
     DEPLOY_VER: ${{ github.sha }}
+    MONTH: "February"
+    DAY_OF_THE_MONTH: "15"
+    YEAR: 1997
 
 
 jobs:
@@ -21,6 +24,16 @@ jobs:
         - name: Print DEPLOY_VER
           run: echo "Hello from $DEPLOY_VER commit"
     
-    # second_job:
-    #     needs: first_job
-    #     runs-on: ubuntu-latest
+    second_job:
+        needs: first_job
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v2
+        - name: Print day of the month
+          run: echo $DAY_OF_THE_MONTH
+        - name: Print system date and time
+          run: date
+        - name: Print variable
+          run: echo "Day - $DAY_OF_THE_MONTH
+                     Month - $MONTH
+                     Yaer - $YEAR "
