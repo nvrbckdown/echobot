@@ -6,7 +6,7 @@ on:
             - main
 
 env:
-    DEPLOY_VER: $GITHUB_SHA
+    DEPLOY_VER: ${GITHUB_SHA}
 
 
 jobs:
