@@ -10,6 +10,7 @@ env:
     MONTH: "February"
     DAY_OF_THE_MONTH: "15"
     YEAR: 1997
+    FAVORITE_DAY_OF_WEEK: ${{ secrets.FAVORITE_DAY_OF_WEEK }}
 
 
 jobs:
@@ -36,4 +37,4 @@ jobs:
         - name: Print variable
           run: echo "Day - $DAY_OF_THE_MONTH\nMonth - $MONTH\nYaer - $YEAR"
         - name: Print favorite day of week
-          run: echo "My favorite day of week is ${{ secrets.FAVORITE_DAY_OF_WEEK }}
+          run: echo "My favorite day of week is $FAVORITE_DAY_OF_WEEK"
