@@ -15,8 +15,8 @@ jobs:
         steps:
         - name: Print entity of repo
           run: ls
-        - name: Print entity of main.py
-          run: cat main.py
+#         - name: Print entity of main.py
+#           run: cat main.py
         - name: Print DEPLOY_VER
           run: echo "Hello from $DEPLOY_VER commit"
     
