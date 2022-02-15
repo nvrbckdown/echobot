@@ -14,7 +14,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: Print entity of repo
-          run: ls
+          run: ls -la .
 #         - name: Print entity of main.py
 #           run: cat main.py
         - name: Print DEPLOY_VER
