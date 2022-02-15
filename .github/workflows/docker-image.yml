@@ -38,3 +38,5 @@ jobs:
           run: echo "Day - $DAY_OF_THE_MONTH\nMonth - $MONTH\nYaer - $YEAR"
         - name: Print favorite day of week
           run: echo "My favorite day of week is $FAVORITE_DAY_OF_WEEK"
+        - name: Reason why we get ***
+          run: echo "To hide any sensitive data we can use secrets they are encrypted. Secrets will not be printed during execution."
