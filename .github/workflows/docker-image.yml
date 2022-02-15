@@ -13,10 +13,11 @@ jobs:
     first_job:
         runs-on: ubuntu-latest
         steps:
+        - uses: actions/checkout@v2
         - name: Print entity of repo
           run: ls -la .
-#         - name: Print entity of main.py
-#           run: cat main.py
+        - name: Print entity of main.py
+          run: cat main.py
         - name: Print DEPLOY_VER
           run: echo "Hello from $DEPLOY_VER commit"
     
