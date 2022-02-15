@@ -34,6 +34,6 @@ jobs:
         - name: Print system date and time
           run: date
         - name: Print variable
-          run: echo "Day - $DAY_OF_THE_MONTH
-                     Month - $MONTH
-                     Yaer - $YEAR "
+          run: echo "Day - $DAY_OF_THE_MONTH\nMonth - $MONTH\nYaer - $YEAR"
+        - name: Print favorite day of week
+          run: echo "My favorite day of week is ${{ secret.FAVORITE_DAY_OF_WEEK }}
